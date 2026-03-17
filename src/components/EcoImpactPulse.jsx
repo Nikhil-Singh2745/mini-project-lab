@@ -4,16 +4,15 @@ import { materialsData } from '../data/materials';
 
 export default function EcoImpactPulse() {
   const [adoptionRate, setAdoptionRate] = useState(25);
-  const activeMaterial = materialsData[0]; // Hardcoded mushroom mycelium for simplicity
+  const activeMaterial = materialsData[0];
   
-  // Fake math just for visual demonstration
-  const globalPlastics = 400; // Million tons
+  const globalPlastics = 400;
   const co2Saved = (1.5 * (adoptionRate/100) * globalPlastics).toFixed(1);
 
   return (
     <div className="w-full max-w-5xl mx-auto p-6 flex flex-col md:flex-row gap-8 mt-4">
       
-      {/* Simulation Viewport */}
+
       <div className="flex-1 rounded-3xl bg-stone-800 p-8 relative overflow-hidden min-h-[400px] flex items-center justify-center shadow-xl">
         <div className={`absolute inset-0 bg-gradient-to-br transition-colors duration-700 ${adoptionRate > 50 ? 'from-emerald-900/50 to-teal-900/50' : 'from-rose-900/50 to-orange-900/50'}`} />
         
@@ -26,7 +25,7 @@ export default function EcoImpactPulse() {
         </div>
       </div>
 
-      {/* Controls */}
+
       <div className="w-full md:w-96 flex flex-col justify-center gap-6">
         <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
           <div className="flex justify-between items-end mb-4">

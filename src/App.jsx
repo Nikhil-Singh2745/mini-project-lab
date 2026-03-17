@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="w-full min-h-screen flex flex-col pt-24 relative overflow-hidden bg-[#faf7f2]">
-      {/* Universal Navigation */}
+
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div 
@@ -65,7 +65,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Main Content Area */}
+
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 pb-12">
         {renderView()}
       </main>

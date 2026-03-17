@@ -7,7 +7,7 @@ export default function Configurator() {
 
   return (
     <div className="w-full h-full min-h-[500px] flex flex-col md:flex-row gap-6 p-6">
-      {/* Left Panel: Controls */}
+
       <div className="w-full md:w-80 flex flex-col gap-4">
         <div className="glass-panel p-5 rounded-2xl bg-white/60">
           <h2 className="font-clash text-2xl text-[#1a1208] mb-2 flex items-center gap-2">
@@ -33,7 +33,7 @@ export default function Configurator() {
         </div>
       </div>
 
-      {/* Center Panel: Mock 3D View */}
+
       <div className="flex-1 rounded-2xl border-2 border-dashed border-stone-300 bg-stone-50 flex items-center justify-center relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-br from-stone-100/50 to-stone-200/50" />
         <div className="relative text-center flex flex-col items-center">
@@ -48,7 +48,7 @@ export default function Configurator() {
         </div>
       </div>
 
-      {/* Right Panel: Spec Sheet */}
+
       <div className="w-full md:w-80 flex flex-col gap-4">
         <div className="glass-panel p-5 rounded-2xl bg-white/60 h-full">
           <h2 className="font-clash text-2xl text-[#1a1208] mb-4">Specifications</h2>

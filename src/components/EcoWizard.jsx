@@ -45,7 +45,7 @@ export default function EcoWizard({ onCancel }) {
   const computeRecommendation = (finalAnswers) => {
     setIsComputing(true);
     setTimeout(() => {
-      // Simplified Logic: Just match industry for the mock test
+
       const match = materialsData.find(m => m.category === finalAnswers.industry) || materialsData[0];
       setRecommendation(match);
       setIsComputing(false);

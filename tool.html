@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPack Tool - Recommendation Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tool-body">
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Home</a>
+            </div>
+            <div class="nav-title">EcoPack Select Tool</div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         WIZARD APPLICATION AREA
+         ========================================== -->
+    <main class="tool-main">
+        <div class="wizard-container" id="wizard-form">
+            <h2>Find Your Sustainable Packaging</h2>
+            <p>Select your product category and constraints to get a mock AI recommendation.</p>
+
+            <div class="form-group">
+                <label for="category">Product Category:</label>
+                <select id="category" class="form-control">
+                    <option value="" disabled selected>Select category...</option>
+                    <option value="food">Food & Beverage</option>
+                    <option value="cosmetics">Cosmetics</option>
+                    <option value="pharma">Pharmaceuticals</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feature">Required Feature:</label>
+                <select id="feature" class="form-control">
+                    <option value="moisture">Moisture Resistance</option>
+                    <option value="durability">High Durability</option>
+                    <option value="aesthetic">Premium Aesthetic</option>
+                </select>
+            </div>
+
+            <button class="btn-primary lg w-full mt-4" onclick="getRecommendation()">Generate Recommendation</button>
+        </div>
+
+        <!-- ==========================================
+             RESULTS DISPLAY (HIDDEN INITIALLY)
+             ========================================== -->
+        <div class="result-container hidden" id="result-box">
+            <div class="loading-spinner hidden" id="spinner">
+                <i class="fas fa-circle-notch fa-spin"></i> Loading Mock API Data...
+            </div>
+            
+            <div id="material-result" class="hidden">
+                <div class="badge" id="mat-badge">Recommended Material</div>
+                <h2 id="mat-name" class="material-title">Material Name</h2>
+                <p id="mat-desc" class="material-desc">Description goes here.</p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <i class="fas fa-leaf text-green"></i>
+                        <span id="mat-biodegradable">Yes</span>
+                        <small>Biodegradable</small>
+                    </div>
+                    <div class="metric-box">
+                        <i class="fas fa-smog text-orange"></i>
+                        <span id="mat-carbon">-40%</span>
+                        <small>Carbon Offset</small>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-center" style="margin-top: 2rem;">
+                    <button class="btn-secondary" onclick="resetTool()">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

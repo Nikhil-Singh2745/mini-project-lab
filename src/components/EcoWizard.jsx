@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, ArrowLeft, Check, Sparkles, Factory, Leaf, Recycle, ShieldCheck, DollarSign } from 'lucide-react';
-import { materialsData } from './data/materials';
+import { materialsData } from '../data/materials';
 
 const QUESTIONS = [
   {

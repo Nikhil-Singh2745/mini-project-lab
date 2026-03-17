@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-[#1a1208] bg-[#ebe9e1];
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-md border border-stone-200 shadow-xl shadow-stone-200/20;
+}
